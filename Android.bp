@@ -17,6 +17,26 @@ cc_library_shared {
         "tinystr.cpp",
     ],
 
+    //vendor: true,
+
+    cflags: [
+        "-Wno-implicit-fallthrough",
+        "-Wno-logical-op-parentheses",
+        "-Wno-missing-braces",
+        "-Wno-undefined-bool-conversion",
+        "-Werror",
+    ],
+}
+cc_library_shared {
+    name: "libvendortinyxml",
+
+    srcs: [
+        "tinyxml.cpp",
+        "tinyxmlparser.cpp",
+        "tinyxmlerror.cpp",
+        "tinystr.cpp",
+    ],
+
     vendor: true,
 
     cflags: [
